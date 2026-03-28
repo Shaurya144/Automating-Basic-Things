@@ -1,1 +1,2 @@
 Functions : A major purpose of functions is to group code that gets executed multiple times. 
+When you call the print() or len() function, you pass it values, called arguments, by entering them between the parentheses. You can also define your own functions that accept arguments.
