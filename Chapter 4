@@ -1,3 +1,5 @@
 Functions : A major purpose of functions is to group code that gets executed multiple times. 
 When you call the print() or len() function, you pass it values, called arguments, by entering them between the parentheses. You can also define your own functions that accept arguments.
 Python will remember which line of code called the function so that the execution can return there when it encounters a return statement.
+Only code within a called function can access the parameters and variables assigned in that function. These variables are said to exist in that function’s local scope. 
+By contrast, code anywhere in a program can access variables that are assigned outside all functions. These variables are said to exist in the global scope. 
