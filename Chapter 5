@@ -1,1 +1,7 @@
 
+Python raises an exception whenever it tries to execute invalid code.
+#try and except statements so that your program could recover from exceptions you anticipated
+raise exceptions with :
+The raise keyword
+A call to the Exception() function
+A string with a helpful error message passed to the Exception() function
