@@ -10,3 +10,5 @@ the logging module in python can be used to determine where in the code a mistak
 each part of code and if a log is skipped you know there is an error in the code
 You can write log messages to declutter your screen 
 IT IS BAD PRACTICE TO USE PRINT() in code instead as can take a long time to clear up.
+
+there are different logging functions : debug, info, warning, error, critical 
