@@ -2,3 +2,8 @@ Lists
 Lists and tuples can contain multiple values, which makes writing programs that handle large amounts of data easier.
 A list is a value that contains multiple values in an ordered sequence. We call values inside the list items
 -1 and -2 inter values refer to the lasst and second to last indexes in a list
+
+slice lists using [n:m]
+len() function tells you the length of the list
+you can update certain values in lists
+concatentaion and replication
