@@ -7,3 +7,5 @@ slice lists using [n:m]
 len() function tells you the length of the list
 you can update certain values in lists
 concatentaion and replication
+
+adding lists together
