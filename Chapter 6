@@ -11,3 +11,5 @@ concatentaion and replication
 adding lists together
 can be done using the + and * to multiply the lists just like you would to strings
 del statement will delete values at an index in a list.
+
+the in an not in operators
