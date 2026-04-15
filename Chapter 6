@@ -12,4 +12,19 @@ adding lists together
 can be done using the + and * to multiply the lists just like you would to strings
 del statement will delete values at an index in a list.
 
-the "in" an "not in" operators
+the "in" an "not in" operators return true or false 
+
+ you can call the enumerate() function instead of using range(len(list)) - however it will return two values
+index and the item.
+
+Methods are called on values
+each data type has its own methods
+
+you can add values to a list using .append() or .insert()
+names for methods are quite straight forwards so - .remove() removes values
+
+.sort() orders strings in alphabetical order and numbers in numerical
+
+A list value is a mutable data type: you can add, remove, or change its values. However, a string is immutable: it cannot be changed.
+
+tuples are different to lists in that they are immutable and you can use parantheses instead of square brackets
