@@ -27,6 +27,8 @@ print('Done')
 #
 
 import re
-phone_number_obj = re.compile(r'\d{3}-\d{4}-\d{3}')
-match_obj = phone_number_obj.search(message)
+phone_num_pattern_obj = re.compile(r'\d{3}-\d{3}-\d{4}')
+match_obj = phone_num_pattern_obj.search('My number is 415-555-4242.')
 match_obj.group()
+
+# did not understand much of this chapter so will come back after chapter 10
