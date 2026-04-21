@@ -13,7 +13,7 @@ print(is_phone_number(answer))
 # UK phone numbers eg 07294392759
 
 
-message = 'Call me at 08294592852 tomorrow. 07294392759 is my office.'
+message = 'Call me at 08294592852 tomorrow. 07294392759 is my office.
 for i in range(len(message)):
   segment = message[i:i+11]
   if is_phone_number(segment):
