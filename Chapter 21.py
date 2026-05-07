@@ -1,110 +1,201 @@
-import time
-
-# time.time() returns the current time in seconds since the Unix epoch
-current_time = time.time()
-print(current_time)
-
-# time.sleep() pauses execution for a given number of seconds
-print("Start")
-time.sleep(2)
-print("2 seconds later")
+import matplotlib.pyplot as plt
 
 
-# Rounding time values
+# Basic Line Graph
 
-# You can round time values for readability
-rounded_time = round(time.time(), 2)
-print(rounded_time)
+x_values = [1, 2, 3, 4]
 
+y_values = [10, 20, 25, 30]
 
-# Using the datetime module
+# plt.plot(x_values, y_values)
 
-import datetime
-
-# Get the current date and time
-now = datetime.datetime.now()
-print(now)
-
-# Create a specific datetime object
-dt = datetime.datetime(2025, 1, 1, 12, 0, 0)
-print(dt)
-
-# Access individual parts of the datetime
-print(dt.year)
-print(dt.month)
-print(dt.day)
+# plt.show()
 
 
-# Working with timedelta objects
+# Labels and Title
 
-# A timedelta represents a duration of time
-delta = datetime.timedelta(days=7, hours=2)
-print(delta)
+# plt.title("Sales")
 
-# Add and subtract time
-future = now + delta
-print(future)
+# plt.xlabel("Month")
 
-past = now - delta
-print(past)
+# plt.ylabel("Profit")
 
 
-# Converting datetime to strings
+# Bar Chart
 
-# strftime() formats datetime into a string
-formatted = now.strftime("%Y-%m-%d %H:%M:%S")
-print(formatted)
+languages = ["Python", "Java", "C++"]
 
-# Common format codes:
-# %Y = year
-# %m = month
-# %d = day
-# %H = hour (24-hour format)
-# %M = minute
-# %S = second
+users = [100, 70, 50]
+
+# plt.bar(languages, users)
+
+# plt.show()
 
 
-# Converting strings to datetime
+# Pie Chart
 
-# strptime() parses a string into a datetime object
-date_string = "2025-12-25 15:30:00"
-parsed = datetime.datetime.strptime(date_string, "%Y-%m-%d %H:%M:%S")
-print(parsed)
+sizes = [50, 30, 20]
 
+labels = ["Python", "Java", "C++"]
 
-# Pausing until a specific date
+# plt.pie(sizes, labels=labels)
 
-# Example: wait until a future moment
-target = datetime.datetime(2026, 1, 1, 0, 0, 0)
-
-while datetime.datetime.now() < target:
-    time.sleep(1)
-
-print("Happy New Year!")
+# plt.show()
 
 
-# Launching external programs
+# Saving Graphs
 
-import subprocess
-
-# Run another program (Windows example)
-subprocess.Popen(["notepad.exe"])
-
-# Open a file with its default application
-subprocess.Popen(["start", "example.txt"], shell=True)
+# plt.savefig("graph.png")
 
 
-# Opening websites with webbrowser
+# Pillow
 
-import webbrowser
+"""
+Pillow edits images.
 
-# Open a URL in the default browser
-webbrowser.open("https://www.google.com")
+Module:
+PIL
+"""
+
+# pip install pillow
+
+from PIL import Image
 
 
-# Basic task scheduling
+# Opening Images
 
-# Example: run a task every 10 seconds
-while True:
-    print("Task running...")
-    time.sleep(10)
+# image_obj = Image.open("cat.png")
+
+# print(image_obj.size)
+
+# print(image_obj.filename)
+
+
+# Image Size
+
+"""
+size returns:
+(width, height)
+"""
+
+
+# Cropping Images
+
+# cropped = image_obj.crop(
+#     (0, 0, 100, 100)
+# )
+
+# cropped.show()
+
+
+# Copying Images
+
+# copied = image_obj.copy()
+
+
+# Resizing Images
+
+# resized = image_obj.resize(
+#     (300, 300)
+# )
+
+# resized.show()
+
+
+# Rotating Images
+
+# rotated = image_obj.rotate(90)
+
+# rotated.show()
+
+
+# Flipping Images
+
+# flipped = image_obj.transpose(
+#     Image.FLIP_LEFT_RIGHT
+# )
+
+# flipped.show()
+
+
+# Saving Images
+
+# image_obj.save("new_image.png")
+
+
+# Drawing on Images
+
+from PIL import ImageDraw
+
+# draw = ImageDraw.Draw(image_obj)
+
+# draw.line((0, 0, 100, 100))
+
+# draw.rectangle((20, 20, 80, 80))
+
+# draw.text((10, 10), "Hello")
+
+
+# Fonts
+
+from PIL import ImageFont
+
+# font = ImageFont.truetype(
+#     "arial.ttf",
+#     20
+# )
+
+# draw.text(
+#     (50, 50),
+#     "Python",
+#     fill="white",
+#     font=font
+# )
+
+
+# Colors
+
+"""
+Common colors:
+red
+blue
+white
+black
+green
+"""
+
+
+# RGBA Colors
+
+"""
+RGBA format:
+
+(red, green, blue, alpha)
+
+Example:
+(255, 0, 0, 255)
+"""
+
+
+# Common Image Formats
+
+"""
+PNG
+JPEG
+GIF
+BMP
+"""
+
+
+# Mini Image Example
+
+from PIL import Image
+
+# image = Image.open("photo.png")
+
+# resized = image.resize((200, 200))
+
+# resized.save("small_photo.png")
+
+
+print("Chapter 21 notes loaded.")
